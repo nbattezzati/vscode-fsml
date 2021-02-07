@@ -1,0 +1,41 @@
+{
+    "name": "fsml",
+    "displayName": "FSM Language (FSML)",
+    "description": "Syntax highlighting for FSM Language (FSML)",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/nbattezzati/vscode-fsml.git"
+    },
+    "homepage": "https://github.com/nbattezzati/vscode-fsml",
+    "qna": "https://github.com/nbattezzati/vscode-fsml/issues",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "keywords": [
+        "FSM",
+        "Finite State Machine",
+        "Embedded",
+        "Safety",
+        "Real-time"
+    ],
+    "categories": [
+        "Programming Languages",
+        "Formatters"
+    ],
+
+    "contributes": {
+        "languages": [{
+            "id": "fsml",
+            "aliases": ["FSML", "fsml"],
+            "extensions": [".fsm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fsml",
+            "scopeName": "source.fsml",
+            "path": "./syntaxes/fsml.tmLanguage.json",
+            "embeddedLanguages": {"meta.embedded.block.c": "c"}
+        }]
+    }
+}

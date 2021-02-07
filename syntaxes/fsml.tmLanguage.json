@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FSML",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "entity.name.section",
+				"match": "\\b(decl|export|time|period)\\b"
+			},
+			{
+				"name": "keyword.control.transition.fsml",
+				"match": "\\b(on|timeout)\\b"
+			},
+			{
+				"name": "keyword.control.actuator.fsml",
+				"match": "\\b(go|retry|err|out|start)\\b"
+			},
+			{
+				"name": "keyword.control.until.fsml",
+				"match": "\\b(until|retry)\\b"
+			},
+			{
+				"name": "storage.type.fsm.fsml",
+				"match": "\\b(fsm)\\b"
+			},
+			{
+				"name": "storage.type.state.fsml",
+				"match": "\\b(state)\\b"
+			},
+			{
+				"name": "storage.type.variable.fsml",
+				"match": "\\b(var|input|output|timer)\\b"
+			},
+			{
+				"name": "storage.type.built-in.fsml",
+				"match": "\\b(void|char|int|long|float|double|union|struct|enum|signed|unsigned)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.fsml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fsml",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.fsml"
+}
